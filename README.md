@@ -37,6 +37,8 @@ Output: Linked list should be changed to
 4->3->2->1->NULL
 
 Question 5. Write a java program where user given the input and given array A[] of n numbers and another number x, determines whether or not there exist two elements in A[] whose sum is exactly x.
+
+
 ans: The algorithm to determine whether or not there exist two elements in A[] whose sum is exactly x:
 
 Start by taking input from the user for the array A[] of size n and the number x.

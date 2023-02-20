@@ -28,7 +28,7 @@ output : 110
 
 (2) Input: arr[] = { 3,2,7,10}
 output : 13
-
+ans: 
 Question 4. Given pointer to the head node of a linked list, the task is to reverse the linked list. Write the program in java.
 
 Input: Linked list 1->2->3->4->NULL
@@ -37,3 +37,13 @@ Output: Linked list should be changed to
 4->3->2->1->NULL
 
 Question 5. Write a java program where user given the input and given array A[] of n numbers and another number x, determines whether or not there exist two elements in A[] whose sum is exactly x.
+ans: The algorithm to determine whether or not there exist two elements in A[] whose sum is exactly x:
+
+Start by taking input from the user for the array A[] of size n and the number x.
+Initialize a boolean variable flag to false.
+Loop through the array A[] from the first element to the second last element. For each element A[i], perform the following steps:
+(a) Loop through the array A[] from the next element to the last element. For each element A[j], perform the following steps:
+(b) If the sum of A[i] and A[j] is equal to x, set the flag to true and break out of the inner loop.
+If the flag is true, print "There exist two elements in A[] whose sum is exactly x."
+Otherwise, print "There are no two elements in A[] whose sum is exactly x."
+End of the algorithm.

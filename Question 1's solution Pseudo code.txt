@@ -1,0 +1,23 @@
+initialize process queue with all processes in the order of their arrival time
+set current_time = 0
+initialize remaining_time array with the burst time of all processes
+initialize completion_time array with all values set to -1
+initialize waiting_time array with all values set to 0
+
+while process queue is not empty:
+  set current_process = dequeue from the process queue
+  if current_process has not been executed before:
+    set completion_time[current_process] = current_time + min(time quantum, remaining_time[current_process])
+  else:
+    set completion_time[current_process] = current_time + min(time quantum, remaining_time[current_process] - time quantum)
+  set current_time = completion_time[current_process]
+  set remaining_time[current_process] = remaining_time[current_process] - min(time quantum, remaining_time[current_process])
+  if remaining_time[current_process] > 0:
+    enqueue current_process back to the process queue
+  else:
+    set waiting_time[current_process] = completion_time[current_process] - burst_time[current_process]
+
+for each process:
+  set turnaround_time[process] = completion_time[process] - arrival_time[process]
+
+print completion_time, turnaround_time, waiting_time for each process
